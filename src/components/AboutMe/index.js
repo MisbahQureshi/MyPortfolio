@@ -33,7 +33,7 @@ font-weight: 600;
 margin-top: 70px;
   color: ${({ theme }) => theme.text_primary};
   span {
-    color: #BE1ADB; 
+    color: #a855f7; 
   }
   @media (max-width: 768px) {
 margin-top: 12px;

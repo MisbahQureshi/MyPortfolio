@@ -51,7 +51,7 @@ const Card = styled.div`
         -webkit-line-clamp: unset;
 
     }
-    border: 0.1px solid #BE1ADB;
+    border: 0.1px solid #a855f7;
 `
 
 const Top = styled.div`
