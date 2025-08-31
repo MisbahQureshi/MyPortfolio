@@ -1,7 +1,7 @@
 
 import React from 'react'
 import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Hello, Title, Span, SubTitle,SocialMediaIcons,SocialMediaIcon,AboutMeButton, ResumeButton } from './HeroStyle'
-import HeroImg from '../../images/HeroImage.jpg'
+import HeroImg from '../../images/newImg.jpeg'
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
