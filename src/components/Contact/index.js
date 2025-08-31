@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled from "styled-components";
-import { Snackbar } from "@mui/material";
+import { Snackbar, Alert } from "@mui/material";
 
 const Container = styled.div`
   display: flex;
@@ -36,7 +36,7 @@ const Title = styled.div`
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   span {
-    color: #a855f7; 
+    color: #a855f7;
   }
   @media (max-width: 768px) {
     margin-top: 12px;
@@ -117,52 +117,79 @@ const ContactButton = styled.input`
   font-weight: 600;
   transition: all 0.5s ease;
   &:hover {
-      background-color: ${({ theme }) => theme.primary + 99};
+    background-color: ${({ theme }) => theme.primary + 99};
   }
 `;
 
 const Contact = () => {
   const [open, setOpen] = useState(false);
   const form = useRef();
-
-  const handleSubmit = async (e) => {
+  const EMAIL_TO = "misbahqureshie@gmail.com";
+  const handleSubmit = (e) => {
     e.preventDefault();
-    const formData = new FormData(form.current);
-    try {
-      await fetch("https://formspree.io/f/mjvnbnpg", {
-        method: "POST",
-        body: formData,
-        headers: {
-          Accept: "application/json",
-        },
-      });
+
+    const fd = new FormData(form.current);
+    const fromEmail = (fd.get("from_email") || "").trim();
+    const fromName = (fd.get("from_name") || "").trim();
+    const subject = (fd.get("subject") || "").trim();
+    const message = (fd.get("message") || "").trim();
+
+    if (!fromEmail || !subject || !message) {
       setOpen(true);
-      form.current.reset();
-    } catch (error) {
-      console.log("Error:", error);
+      return;
     }
+
+    const body = `From: ${fromName || "Anonymous"} <${fromEmail}>\n\n${message}`;
+
+    const mailto = `mailto:${encodeURIComponent(
+      EMAIL_TO
+    )}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+
+    form.current.reset();
+    setOpen(true);
   };
 
   return (
     <Container id="contact">
       <Wrapper>
-        <Title>Contact <span>Me</span></Title>
+        <Title>
+          Contact <span>Me</span>
+        </Title>
         <Desc>Contact me for more details!</Desc>
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
+          <ContactInput
+            placeholder="Your Email"
+            name="from_email"
+            type="email"
+            required
+          />
           <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
+          <ContactInput placeholder="Subject" name="subject" required />
+          <ContactInputMessage
+            placeholder="Message"
+            rows="4"
+            name="message"
+            required
+          />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
         <Snackbar
           open={open}
-          autoHideDuration={6000}
+          autoHideDuration={3000}
           onClose={() => setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
+          anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        >
+          <Alert
+            onClose={() => setOpen(false)}
+            severity="success"
+            sx={{ width: "100%" }}
+          >
+            If your mail app opened, you can send the email there.
+          </Alert>
+        </Snackbar>
       </Wrapper>
     </Container>
   );
