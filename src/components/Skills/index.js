@@ -1,51 +1,51 @@
-import React from 'react'
-import styled from 'styled-components'
-import { skills } from '../../data/constants'
+import React from "react";
+import styled from "styled-components";
+import { skills } from "../../data/constants";
 
 const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
-margin-bottom:30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  margin-bottom: 30px;
 `;
 
 const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1100px;
-gap: 12px;
-@media (max-width: 960px) {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1100px;
+  gap: 12px;
+  @media (max-width: 960px) {
     flex-direction: column;
-}
+  }
 `;
 
 export const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 70px;
+  font-size: 42px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 70px;
   color: ${({ theme }) => theme.primary};
   @media (max-width: 768px) {
-margin-top: 12px;
-      font-size: 32px;
+    margin-top: 12px;
+    font-size: 32px;
   }
 `;
 
 export const Desc = styled.div`
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
-    @media (max-width: 768px) {
-        font-size: 16px;
-    }
+  font-size: 18px;
+  text-align: center;
+  max-width: 600px;
+  color: ${({ theme }) => theme.text_secondary};
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 const SkillsContainer = styled.div`
@@ -62,7 +62,7 @@ const Skill = styled.div`
   max-width: 500px;
   background: ${({ theme }) => theme.card};
   border: 1px solid ${({ theme }) => theme.primary};
-  box-shadow: rgba(0,0,0,0.4) 0px 4px 24px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
   @media (max-width: 768px) {
@@ -73,8 +73,6 @@ const Skill = styled.div`
     max-width: 330px;
     padding: 10px 36px;
   }
-
-
 `;
 
 const SkillTitle = styled.h2`
@@ -87,7 +85,7 @@ const SkillTitle = styled.h2`
 
 const SkillList = styled.div`
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-bottom: 20px;
@@ -119,13 +117,23 @@ const SkillImage = styled.img`
   height: 24px;
 `;
 
-
 const Skills = () => {
   return (
     <Container id="skills">
       <Wrapper>
         <Title>Skills</Title>
-        <Desc>Here are some of my skills.
+        <Desc>
+          I have a solid background in programming and software development,
+          with expertise in Python, Java, C#, JavaScript, Node.js, PHP, LaTeX,
+          React, and AngularJS. My skills extend to web technologies and
+          databases, including HTML, CSS, MySQL, and MongoDB, enabling me to
+          design and develop efficient, data-driven applications. I am
+          proficient in industry-standard tools such as Jira, Git, VS Code,
+          Eclipse, and Overleaf, which support seamless collaboration and
+          effective project management. Additionally, I bring a creative
+          dimension to my work through design and multimedia, using Adobe
+          Illustrator, Photoshop, After Effects, XD, and Wondershare Filmora to
+          craft engaging visual content.
         </Desc>
         <SkillsContainer>
           {skills.map((skill) => (
@@ -134,18 +142,17 @@ const Skills = () => {
               <SkillList>
                 {skill.skills.map((item) => (
                   <SkillItem>
-                    <SkillImage src={item.image}/>
+                    <SkillImage src={item.image} />
                     {item.name}
                   </SkillItem>
                 ))}
               </SkillList>
             </Skill>
           ))}
-
         </SkillsContainer>
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;

@@ -173,7 +173,7 @@ export const experiences = [
     role: "Software Engineer 1",
     company: "Impetus Systems Pvt Ltd",
     date: "Jan 2023- Dec 2023",
-    desc: "Worked on HR management software offering different modules that comprehensively cover all HR responsibilities, The system serves over 250 major clients nationwide",
+    desc: "Developed and maintained 15+ full-stack features for a large-scale HR management web application using Spring Boot, AngularJS, and SQL. Mentored and guided a trainee developer, assisting with onboarding, code quality, and task planning. Built and deployed a budgeting module used by 50+ internal users, automating approval workflows and reducing manual budget planning time by 35%. Collaborated with a cross-functional team of 10+ developers, designers, and testers in Agile sprints to ensure timely delivery of product enhancements. Conducted 20+ code reviews and resolved 30+ bugs, contributing to a 15% improvement in overall system reliability. Reduced front-end response time by 25% through UI optimization and efficient data loading strategies.",
     skills: ["C#", "JavaScript", "MySQL", "HTML", "CSS"],
   },
 
@@ -183,7 +183,7 @@ export const experiences = [
     role: "Web Developer Intern",
     company: "Times Group Private Limited",
     date: "Sept 2020 - Oct 2020",
-    desc: "Worked as a Web-Developer Intern for a month to gain a basic understanding of professional web development and create web pages that are functional and visually aesthetic.",
+    desc: "Designed and tested responsive layouts that improved mobile usability scores by 35% across devices. Collaborated with 3 senior developers to fix 15+ UI/UX bugs, leading to a smoother and accessible user interface. Spearheaded the redesign of five key website pages, incorporating user-centered design principles and resulting in a 10% reduction in bounce rate and improved user engagement metrics.",
     skills: ["ReactJS", "HTML", "CSS", "JavaScript"],
   },
   {
