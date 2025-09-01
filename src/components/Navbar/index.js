@@ -1,66 +1,75 @@
-import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, MobileIcon, MobileMenu, MobileLink } from './NavbarStyledComponent'
-import { DiCssdeck } from 'react-icons/di';
-import { FaBars } from 'react-icons/fa';
-import { Bio } from '../../data/constants';
-import { Close, CloseRounded } from '@mui/icons-material';
-import { useTheme } from 'styled-components';
+// components/Navbar/index.js (your navbar.js)
+import React from "react";
+import {
+  Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems,
+  MobileIcon, MobileMenu, MobileLink, ToggleButton
+} from "./NavbarStyledComponent";
+import { FaBars } from "react-icons/fa";
+import { LuSun, LuMoon } from "react-icons/lu";
 
-const Navbar = () => {
+const Navbar = ({ lightMode, onToggle }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme()
+
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to='/'>
-          
-        </NavLogo>
+        <NavLogo to="/">{/* logo/brand here if you want */}</NavLogo>
+
         <MobileIcon>
-          <FaBars onClick={() => {
-            setIsOpen(!isOpen)
-          }} />
+          <FaBars onClick={() => setIsOpen(o => !o)} />
         </MobileIcon>
+
         <NavItems>
           <NavLink href="#home">Home</NavLink>
           <NavLink href="#about">About</NavLink>
-          <NavLink href='#education'>Education</NavLink>
-          <NavLink href='#experience'>Experience</NavLink>
-          <NavLink href='#skills'>Skills</NavLink>
-          <NavLink href='#projects'>Projects</NavLink>
-          <NavLink href='#contact'>Contact</NavLink>
-         
+          <NavLink href="#education">Education</NavLink>
+          <NavLink href="#experience">Experience</NavLink>
+          <NavLink href="#skills">Skills</NavLink>
+          <NavLink href="#projects">Projects</NavLink>
+          <NavLink href="#contact">Contact</NavLink>
+
+          {/* theme toggle */}
+          <ToggleButton
+            type="button"
+            aria-label={lightMode ? "Switch to dark theme" : "Switch to light theme"}
+            onClick={onToggle}
+            $active={!lightMode}
+            title={lightMode ? "Light" : "Dark"}
+          >
+            {lightMode ? <LuSun size={18} /> : <LuMoon size={18} />}
+          </ToggleButton>
         </NavItems>
-        
-        {
-          isOpen &&
+
+        {isOpen && (
           <MobileMenu isOpen={isOpen}>
-             <MobileLink href="#home" onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Home</MobileLink>
-            <MobileLink href="#about" onClick={() => {
-              setIsOpen(!isOpen)
-            }}>About</MobileLink>
-             <MobileLink href='#education' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Education</MobileLink>
-             <MobileLink href='#experience' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Experience</MobileLink>
-            <MobileLink href='#skills' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Skills</MobileLink>
-            <MobileLink href='#projects' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Projects</MobileLink>
-             <MobileLink href='#contact' onClick={() => {
-              setIsOpen(!isOpen)
-            }}>Contact</MobileLink>
-           
+            <MobileLink href="#home" onClick={() => setIsOpen(false)}>Home</MobileLink>
+            <MobileLink href="#about" onClick={() => setIsOpen(false)}>About</MobileLink>
+            <MobileLink href="#education" onClick={() => setIsOpen(false)}>Education</MobileLink>
+            <MobileLink href="#experience" onClick={() => setIsOpen(false)}>Experience</MobileLink>
+            <MobileLink href="#skills" onClick={() => setIsOpen(false)}>Skills</MobileLink>
+            <MobileLink href="#projects" onClick={() => setIsOpen(false)}>Projects</MobileLink>
+            <MobileLink href="#contact" onClick={() => setIsOpen(false)}>Contact</MobileLink>
+
+            {/* mobile theme toggle */}
+            <ToggleButton
+              type="button"
+              aria-label={lightMode ? "Switch to dark theme" : "Switch to light theme"}
+              onClick={() => {
+                onToggle();
+                setIsOpen(false);
+              }}
+              $active={!lightMode}
+              style={{ alignSelf: "flex-start", marginTop: 8 }}
+              title={lightMode ? "Light" : "Dark"}
+            >
+              {lightMode ? <LuSun size={18} /> : <LuMoon size={18} />}
+              <Span style={{ marginLeft: 8 }}>{lightMode ? "Light" : "Dark"}</Span>
+            </ToggleButton>
           </MobileMenu>
-        }
+        )}
       </NavbarContainer>
     </Nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

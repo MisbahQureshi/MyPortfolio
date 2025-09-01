@@ -1,3 +1,4 @@
+// App.js
 import "./App.css";
 import styled, { ThemeProvider } from "styled-components";
 import { useState, useEffect } from "react";
@@ -23,12 +24,12 @@ const Body = styled.div`
 const Wrapper = styled.div`
   background: linear-gradient(
       38.73deg,
-      rgba(178, 58, 72, 0.15) 0%,    /* soft crimson red */
+      rgba(178, 58, 72, 0.15) 0%,
       rgba(178, 58, 72, 0) 50%
     ),
     linear-gradient(
       141.27deg,
-      rgba(230, 180, 80, 0) 50%,     /* golden beige */
+      rgba(230, 180, 80, 0) 50%,
       rgba(230, 180, 80, 0.12) 100%
     );
   width: 100%;
@@ -36,13 +37,27 @@ const Wrapper = styled.div`
 `;
 
 function App() {
-  const [lightMode, setLightMode] = useState(true);
+  // initialize from localStorage or system preference
+  const getInitialMode = () => {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") return true;
+    if (saved === "dark") return false;
+    // fallback to system
+    return window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: light)").matches;
+  };
+
+  const [lightMode, setLightMode] = useState(getInitialMode);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  console.log(openModal);
+
+  useEffect(() => {
+    localStorage.setItem("theme", lightMode ? "light" : "dark");
+  }, [lightMode]);
+
   return (
-    <ThemeProvider theme={lightMode ? darkTheme : darkTheme}>
+    <ThemeProvider theme={lightMode ? lightTheme : darkTheme}>
       <Router>
-        <Navbar />
+        <Navbar lightMode={lightMode} onToggle={() => setLightMode(m => !m)} />
         <Body>
           <Hero />
           <Wrapper>
@@ -53,7 +68,6 @@ function App() {
           <Wrapper>
             <Skills />
             <Projects openModal={openModal} setOpenModal={setOpenModal} />
-
             {openModal.state && (
               <ProjectDetails
                 openModal={openModal}
@@ -62,7 +76,7 @@ function App() {
             )}
             <Contact />
           </Wrapper>
-          <Footer/>
+          <Footer />
         </Body>
       </Router>
     </ThemeProvider>
