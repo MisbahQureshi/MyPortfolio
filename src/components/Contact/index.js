@@ -36,7 +36,7 @@ const Title = styled.div`
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   span {
-    color: #a855f7;
+    color: ${({ theme }) => theme.primary};
   }
   @media (max-width: 768px) {
     margin-top: 12px;
@@ -63,7 +63,7 @@ const ContactForm = styled.form`
   background-color: ${({ theme }) => theme.card};
   padding: 32px;
   border-radius: 16px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  box-shadow: rgba(0,0,0,0.4) 0px 4px 24px;
   margin-top: 28px;
   gap: 12px;
 `;

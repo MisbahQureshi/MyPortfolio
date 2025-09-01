@@ -31,7 +31,7 @@ export const Title = styled.div`
   margin-top: 70px;
   color: ${({ theme }) => theme.text_primary};
   span {
-    color: #a855f7;
+    color: ${({ theme }) => theme.primary};
   }
   @media (max-width: 768px) {
     margin-top: 12px;

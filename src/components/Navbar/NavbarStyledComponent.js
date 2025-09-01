@@ -3,7 +3,7 @@ import styled from 'styled-components';
 //import _default from '../../themes/default';
 
 export const Nav = styled.div`
-    background-color: #faf5ff;
+    background-color: ${({ theme }) => theme.navColor};
     height: 80px;
     display: flex;
     align-items: center;

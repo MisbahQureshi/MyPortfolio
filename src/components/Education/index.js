@@ -44,7 +44,7 @@ const Title = styled.div`
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
   span {
-    color: #a855f7;
+    color: ${({ theme }) => theme.primary};
   }
   @media (max-width: 768px) {
     margin-top: 12px;
@@ -96,9 +96,9 @@ const index = () => {
                   <EducationCard education={education} />
                 </TimelineContent>
                 <TimelineSeparator>
-                  <TimelineDot variant="outlined" color="secondary" />
+                  <TimelineDot variant="outlined" sx={{ borderColor: "#B23A48", color: "#B23A48" }} />
                   {index !== experiences.length && (
-                    <TimelineConnector style={{ background: "#854CE6" }} />
+                    <TimelineConnector style={{ background: "#B23A48" }} />
                   )}
                 </TimelineSeparator>
               </TimelineItem>

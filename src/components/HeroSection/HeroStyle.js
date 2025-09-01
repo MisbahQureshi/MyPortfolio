@@ -1,4 +1,3 @@
-
 import styled from "styled-components";
 //import _default from "../../themes/default";
 
@@ -8,7 +7,7 @@ export const HeroContainer = styled.div`
   justify-content: center;
   position: relative;
   padding: 30px 30px;
-  margin-bottom:55px;
+  margin-bottom: 55px;
   @media (max-width: 960px) {
     padding: 66px 16px;
   }
@@ -57,7 +56,7 @@ export const HeroInnerContainer = styled.div`
   }
 `;
 export const HeroLeftContainer = styled.div`
-  padding:20px;
+  padding: 20px;
   width: 100%;
   order: 1;
   @media (max-width: 960px) {
@@ -185,95 +184,99 @@ export const SubTitle = styled.div`
 `;
 
 export const ResumeButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    width: 45%;
-    max-width: 300px;
-    text-align: center;
-    padding: 12px 0;
-    margin: 10px;
-    color:#f0f0f0;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out !important;
-    background: ${({ theme }) => theme.primary};
-    &:hover {
-        transform: scale(1.05);
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  width: 45%;
+  max-width: 300px;
+  text-align: center;
+  padding: 12px 0;
+  margin: 10px;
+  color: #f0f0f0;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out !important;
+  background: ${({ theme }) => theme.primary};
+  &:hover {
+    transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    
-    filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        font-size: 18px;
-        width: 65%;
-    } 
 
+    filter: brightness(1);
+  }
+
+  @media (max-width: 640px) {
+    font-size: 18px;
+    width: 65%;
+  }
 `;
 
-
 export const SocialMediaIcons = styled.div`
-    display: flex;
-    justify-content: space-between;
-    width: 150px; /* Adjust width as needed */
-    margin:10px;
+  display: flex;
+  justify-content: space-between;
+  width: 150px; /* Adjust width as needed */
+  margin: 10px;
 `;
 
 export const SocialMediaIcon = styled.a`
-    color:  ${({ theme }) => theme.primary};
-    color: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    color: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    color: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    -20px -20px 60px #1F2634;
-    font-size: 3em;
-    transition: color 0.2s ease-in-out;
+  color: ${({ theme }) => theme.primary};
+  color: linear-gradient(
+    225deg,
+    hsla(350, 60%, 45%, 1) 0%,
+    hsla(40, 80%, 55%, 1) 100%
+  );
+  color: -moz-linear-gradient(
+    225deg,
+    hsla(350, 60%, 45%, 1) 0%,
+    hsla(40, 80%, 55%, 1) 100%
+  );
+  color: -webkit-linear-gradient(
+    225deg,
+    hsla(350, 60%, 45%, 1) 0%,
+    hsla(40, 80%, 55%, 1) 100%
+  );
+  text-shadow: -20px -20px 60px #1f2634;
+  font-size: 3em;
+  transition: color 0.2s ease-in-out;
 
-    &:hover {
-        transform: scale(1.05);
+  &:hover {
+    transform: scale(1.05);
     transition: all 0.4s ease-in-out;
-    
-    filter: brightness(1);
-    }    
 
+    filter: brightness(1);
+  }
 `;
 
 export const AboutMeButton = styled.a`
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    width: 35%;
-    margin:10px;
-    max-width: 300px;
-    text-align: center;
-    padding: 12px 0;
-    color:${({ theme }) => theme.primary};
-    border: 1.8px solid ${({ theme }) => theme.primary};
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 600;
-    transition: all 0.2s ease-in-out !important;
-    
-    &:hover {
-        transform: scale(1.05);
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
+  width: 35%;
+  margin: 10px;
+  max-width: 300px;
+  text-align: center;
+  padding: 12px 0;
+  color: ${({ theme }) => theme.primary};
+  border: 1.8px solid ${({ theme }) => theme.primary};
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out !important;
+
+  &:hover {
+    transform: scale(1.05);
     transition: all 0.6s ease-in-out;
-    color:#f0f0f0;
+    color: #f0f0f0;
     background: ${({ theme }) => theme.primary};
     filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        width: 65%;
-        font-size: 18px;
-    } 
+  }
 
+  @media (max-width: 640px) {
+    width: 65%;
+    font-size: 18px;
+  }
 `;
-
-
