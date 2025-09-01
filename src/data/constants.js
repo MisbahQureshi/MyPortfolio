@@ -12,7 +12,7 @@ export const Bio = {
 
 export const skills = [
   {
-    title: "Technical",
+    title: "Programming and Development",
     skills: [
       {
         name: "Python",
@@ -29,6 +29,49 @@ export const skills = [
         image:
           "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/csharp/csharp-original.svg",
       },
+    
+      {
+        name: "JavaScript",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/javascript/javascript-original.svg",
+      },
+
+      {
+        name: "Node.Js",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/nodejs/nodejs-original.svg",
+      },
+
+      {
+        name: "PHP",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/php/php-original.svg",
+      },
+      
+      {
+        name: "LaTex",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/latex/latex-original.svg",
+      },
+
+      {
+        name: "React",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/react/react-original.svg",
+      },
+
+      {
+        name: "AngularJs",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/angularjs/angularjs-original.svg",
+      },
+
+    ],
+  },
+
+  {
+    title: "Web and Databases",
+    skills: [
       {
         name: "HTML",
         image:
@@ -39,28 +82,58 @@ export const skills = [
         image:
           "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/css3/css3-original.svg",
       },
-      {
-        name: "JavaScript",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/javascript/javascript-original.svg",
-      },
-      {
-        name: "Node.Js",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/nodejs/nodejs-original.svg",
-      },
+     
       {
         name: "MySQL",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/mysql/mysql-original.svg",
       },
+
       {
-        name: "LaTex",
+        name: "MongoDb",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/latex/latex-original.svg",
+          "https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/mongodb/mongodb-original.svg",
       },
+      
     ],
   },
+
+  {
+    title: "Tools",
+    skills: [
+      {
+        name: "Jira",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/jira/jira-original.svg",
+      },
+      {
+        name: "Git",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/git/git-original.svg",
+      },
+     
+      {
+        name: "VS Code",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/vscode/vscode-original.svg",
+      },
+
+      {
+        name: "Eclipse",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/54cfe13ac10eaa1ef817a343ab0a9437eb3c2e08/icons/eclipse/eclipse-original.svg",
+      },
+
+      {
+        name: "OverLeaf",
+        image:
+          "https://user-images.githubusercontent.com/23329364/122003663-abcb4e80-cdb3-11eb-9da5-4127e5e7d03e.png",
+      },
+      
+    ],
+  },
+
+  //design
   {
     title: "Design",
     skills: [
