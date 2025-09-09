@@ -241,7 +241,7 @@ export const projects = [
     description:
       "A web-based application built to help students organize academic life by centralizing projects, tasks, notes, events, and brainstorming tools in one intuitive platform. Developed with PHP, MySQL, and HTML/CSS/JS (XAMPP stack), the system supports secure authentication, structured project management, and creative collaboration features.",
     image:
-      "https://media.licdn.com/dms/image/v2/D4D2DAQGwA5dgkkmCaA/profile-treasury-image-shrink_800_800/B4DZj3r57EHYAY-/0/1756502140287?e=1757286000&v=beta&t=RYMvS1TFdYrLXEq1J4K-pPP1Dcn2tQf8xw0PE3Cmi0U",
+      "https://media.licdn.com/dms/image/v2/D4D2DAQGwA5dgkkmCaA/profile-treasury-image-shrink_800_800/B4DZj3r57EHYAY-/0/1756502140287?e=1758052800&v=beta&t=dl5fKO-rwV20ZENccU57wVWxbi5EjMmDyAzrg0oxleI",
     tags: ["JavaScript", "PHP", "MySQL", "HTML", "CSS"],
     category: "software",
     github: "https://github.com/MisbahQureshi/BrainBow",
