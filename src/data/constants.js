@@ -322,7 +322,7 @@ export const projects = [
     description:
       "A captivating gaming experience that not only pays homage to my Sindhi heritage but also brings a unique twist to the classic platformer genre. Meet Sindhri, the star of my game, who takes players on an exhilarating adventure reminiscent of iconic games like Mario. This game was submitted as a semester project in 2021 and is only developed upto one level.",
     image:
-      "https://media.licdn.com/dms/image/v2/D4D2DAQE3AeuJsNiOdA/profile-treasury-image-shrink_800_800/profile-treasury-image-shrink_800_800/0/1703776010669?e=1757286000&v=beta&t=V03oJkCKcsBrxjibGhSfkJt0--EUQXHm6KcigV7jPJI",
+      "https://github.com/MisbahQureshi/AamRush/blob/master/images/backgrounds/firstpage.png?raw=true",
     tags: ["Flutter", "Dart"],
     category: "software",
     github: "https://github.com/MisbahQureshi/AamRush",
@@ -336,7 +336,7 @@ export const projects = [
     description:
       "We hosted many seminars, workshops, webinars, and conferences related to Software Engineering.",
     image:
-      "https://scontent-ord5-2.xx.fbcdn.net/v/t39.30808-6/305636932_998282844369211_1641530520413316658_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=TfT4gtMRqGYQ7kNvwEeJ2uj&_nc_oc=AdlEwaVcYJsG72YzQGJmNUql49NjpqHqkCcIVFDprO4nFKMuGwgzXfmG0XLiRcd37JI&_nc_zt=23&_nc_ht=scontent-ord5-2.xx&_nc_gid=PxDX0glTYjMAXAHcCK3Adg&oh=00_AfWobiegylAfuwYcVtHReiYmsmfBu8l4-bAzsqRyO_V0HA&oe=68BAAEAC",
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSJXAe8C0j51lSqNAXI0iQV07bFAblJl_SDQ&s",
     tags: [
       "UI.UX",
       "Logo",
