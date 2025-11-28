@@ -19,7 +19,7 @@ transition: all 0.5s ease;
 `;
 
 const Wrapper = styled.div`
-max-width: 800px;
+max-width: 500px;
 width: 100%;
 border-radius: 16px;
 margin: 50px 12px;
